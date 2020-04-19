@@ -1,0 +1,132 @@
+[
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "API Rate-Limiting",
+		"tags": [
+			"PHP",
+			"Server"
+		],
+		"category": "Linux",
+		"body": "**Implementing API Rate-Limiting**\r\n\r\n1. Request Queues:\r\n\t- Ex. ASQS(Amazon Simple Queue Service) is a readymade request queue library maintianed regularly.\r\n\t- Some library take 2 request per second from the queue and remaining kept in the queue for processing.\r\n\t- Many custom \"request-rate-limiter\" library are avaialbe in package manager\r\n\r\n\r\n\r\n2. Throttling\r\n\t- API is used by setting up a temporary state, allowing the API to assess each request. When the throttle is triggered, a user may either be disconnected or simply have their bandwidth reduced.\r\n\t- Possible at the application, API, or user level, throttling is a popular method to rate-limit APIs\r\n\r\n\r\n\r\n3. Rate-limiting Algorithms\r\n\t- \"Leaky Bucket\" is a algorithim which translate requests into FIFO format and processing the items on the queue on a regular rate.\r\n\t- \"Sliding Log\" is time stampped algorithim, the sum of the logs are calculated to determine the request rate. if the request exceeds the limit threshold, they are simply queued.\r\n",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 06:17 PM",
+		"slug": "api-rate-limiting",
+		"categoryslug": "linux",
+		"status": "publised",
+		"summary": "\n<p><strong>Implementing API Rate-Limiting<\/strong><\/p>\n<ol><li>\n<p>Request Queues:<\/p>\n<ul><li>Ex. ASQS(Amazon Simple Queue Service) is a readymade request queue library maintianed regularly.<\/li>\n<li>Some library take 2 request per second from the queue and remaining kept in the queue for process...<\/li><\/ul><\/li><\/ol>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Most Useful Linux Commands",
+		"tags": [
+			"common"
+		],
+		"category": "Linux",
+		"body": "- **uname** command is simple tool which provides information about the kernel, machine, processor, and operating system\r\n\r\n    `uname -m`\r\n\r\n-  check ubuntu linux version\r\n\r\n    `lsb_release -a`\r\n\r\n- show the amount of free disk space on each mounted disk\r\n\r\n    `df -h`\r\n\r\n- displays the total amount of free space available along with the amount of memory used and swap memory in the system\r\n\r\n    `free --human`\r\n\r\n- The grep filter searches a file for a particular pattern of characters, and displays all lines that contain that pattern\r\n\r\n    `grep -iRl \"your-text-to-find\" .\/`\r\n\r\n- displays network connections for Transmission Control Protocol\r\n\r\n    `netstat -tlnp`\r\n\r\n- show all process even the current process is not associated with any TTY (terminal)\r\n\r\n    `ps ax | grep docker`\r\n\r\n- Watching activity on Linux with watch and tail commands \r\n\r\n    `watch \"dmesg | tail -20\"`\r\n\r\n",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 06:09 PM",
+		"slug": "most-useful-linux-commands",
+		"categoryslug": "linux",
+		"status": "publised",
+		"summary": "\n<ul><li>\n<p><strong>uname<\/strong> command is simple tool which provides information about the kernel, machine, processor, and operating system<\/p>\n<p><code>uname -m<\/code><\/p>\n<\/li>\n<li>\n<p>check ubuntu linux version<\/p>\n<p><code>lsb_release -a<\/code><\/p>\n<\/li>\n<li>\n<p>show the amount of free disk...<\/p><\/li><\/ul>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Restful Services",
+		"tags": [
+			"common"
+		],
+		"category": "PHP",
+		"body": "**# Why REST** \r\n\r\n 1. Rest can be fetched from cahced storage instead of always heating to Server\r\n 2. Rest is Stateless.\r\n 3. Rest can work in very low bandwidth\r\n 4. REST request & response can be in  TEXT, XML, HTML and JSON Format.\r\n 5. REST is an architectural pattern not a protocal.\r\n 6. REST can make use of SOAP services.\r\n 7. Challenges in Rest - Lack of Security & Lack of state\r\n\r\n\r\n**# Methods:**\r\n\r\n1. GET\r\n  - This method is like calling a uri with query parameters.\r\n\r\n2. POST\r\n  - Not idempotent method, used to **create** records in DB\r\n  - Since record does not exits before, save url and return url is different.\r\n \r\n3. PUT\r\n  - This method is idempotent. means client and server urls are same.\r\n  - Used for updating a resource by using the primary key.\r\n  - This method specifiy to fully update the db record with the variables.\r\n  - When the the url with primary key is not valid, the record is auto generated in database.\r\n\r\n4. PATCH\r\n  - This method is idempotent. means client and server urls are same.\r\n  - Used for updating a resource by using the primary key.\r\n  - This method specifiy to partially update the db record.\r\n  - When the the url with primary key is not valid, the record is auto generated in database.\r\n\r\n5. DELETE\r\n  - This method in REST is used to destroy the resource. \r\n  - Destroyed resource are not called again To DELETE the resource ",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 05:53 PM",
+		"slug": "restful-services",
+		"categoryslug": "php",
+		"status": "publised",
+		"summary": "\n<p><strong># Why REST<\/strong> <\/p>\n<ol><li>Rest can be fetched from cahced storage instead of always heating to Server<\/li>\n<li>Rest is Stateless.<\/li>\n<li>Rest can work in very low bandwidth<\/li>\n<li>REST request &amp; response can be in  TEXT, XML, HTML and JSON Format.<\/li>\n<li>REST is an archi...<\/li><\/ol>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Upload Large Files to server using script",
+		"tags": [
+			"Javascript",
+			"PHP"
+		],
+		"category": "Javascript",
+		"body": "**Steps**\r\n\r\n1. Choose a javascript plugin which devide the binary data into equal multiple chuncks from clinet.\r\n\r\n2. Pass to server each chunk of binary data with file information. ex. mdf5 name, total chunks, processed chunk in each ajax request one by one to write\/append  in same file on server.\r\n\r\n3. when the total chunks and chunk count in ajax request is same, then file appending\/uploading will complete in server, returning a message to clinet.\r\n \r\n\r\n",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 05:51 PM",
+		"slug": "upload-large-files-to-server-using-script",
+		"categoryslug": "javascript",
+		"status": "publised",
+		"summary": "\n<p><strong>Steps<\/strong><\/p>\n<ol><li>\n<p>Choose a javascript plugin which devide the binary data into equal multiple chuncks from clinet.<\/p>\n<\/li>\n<li>\n<p>Pass to server each chunk of binary data with file information. ex. mdf5 name, total chunks, processed chunk in each ajax request one by one t...<\/p><\/li><\/ol>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Optimising MySQL Query",
+		"tags": [
+			"MySQL"
+		],
+		"category": "Database",
+		"body": "**Steps**\r\n\r\n1. Expain in select query will produce the number of comparison done, look at the column to assign indexing to column\r\n2. Remove generalised statements, instead specifiy the required columns\r\n3. Remove in() and not In() from where clause rather use =. !=\r\n4. Never use subquery if possible, rather to use join\r\n5. De-normalize when not necessary to devide tables futher on basis of normalisation.\r\n",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 05:50 PM",
+		"slug": "optimising-mysql-query",
+		"categoryslug": "database",
+		"status": "publised",
+		"summary": "\n<p><strong>Steps<\/strong><\/p>\n<ol><li>Expain in select query will produce the number of comparison done, look at the column to assign indexing to column<\/li>\n<li>Remove generalised statements, instead specifiy the required columns<\/li>\n<li>Remove in() and not In() from where clause rather use =. !=...<\/li><\/ol>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Supervisor & Crontabs",
+		"tags": [
+			"command"
+		],
+		"category": "Linux",
+		"body": "**Supervisor (Running Program as a process)**\r\n\r\nWhen commad stops after closing the shell terminal, Supervisor takes care to run the command in background as process, Whenever required the process can be killed on shell.\r\n\r\nSteps to run the angular development server in background\r\n\r\n1. sudo apt-get install supervisor\r\n2. vim \/etc\/supervisor\/conf.d\/ngServe.conf\r\n3. supervisorctl\r\n4. vim \/var\/log\/ngServe.out.log\r\n5. tail -f \/var\/log\/ngServe.out.log\r\n6. ps ax | grep PID(4098)\r\n\r\n\r\n**inside the file \"ngServe.conf\"**\r\n\r\n1. [program:ngServe]\r\n2. command=cd \/var\/www\/html\/ng && ng serve --port=8088\r\n3. autostart=true\r\n4. autorestart=true\r\n5. stderr_logfil=\/var\/log\/ngServe.out.log\r\n6. stdout_logfile=\/var\/log\/ngServe.out.log\r\n\r\n\r\n----------\r\n\r\n\r\n**Crontab examples**\r\n\r\n1. crontab -e\r\n2. Examples\r\n    - 0 5 * * 1 tar -zcf \/var\/backups\/home.tgz \/home\/\r\n    - 0 5 * * 1 php  \/var\/www\/html\/run.php\r\n    - 0 5 * * 1 php  php artisan comission:monthly\r\n\r\n",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 05:49 PM",
+		"slug": "supervisor-crontabs",
+		"categoryslug": "linux",
+		"status": "publised",
+		"summary": "\n<p><strong>Supervisor (Running Program as a process)<\/strong><\/p>\n<p>When commad stops after closing the shell terminal, Supervisor takes care to run the command in background as process, Whenever required the process can be killed on shell.<\/p>\n<p>Steps to run the angular development server in back...<\/p>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Design Patterns",
+		"tags": [
+			"common"
+		],
+		"category": "Design Patterns",
+		"body": "In software engineering, a design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.\r\n\r\n**Some Of Design Patterns:**\r\n\r\n1. **Singleton**\r\n   - Whenever only dingle instance of a object is required through out the system\r\n   - Example  DB connection & Logger writing Object.\r\n\r\n2. **Factory**\r\n    - Factory pattern helps in instantiation and creation of Objects\r\n    - According to definition from wikipedia, Factory Pattern is \"A factory is an object for creating other objects\"\r\n    - In simple factory pattern, we have a factory class which has a method that returns different types of object based on given input\r\n    - For an example a Factory produces different type of fans, and all type of fan are kept for Testing, instead of swtiching on \/ off each fan, a factory function should be generated which will test the fan by passing the type of fan, no need to go detail to check how fans are switched off and switched on. It is kind of abstracting the deail functionality of various fans(table fan, ceiling fan, powered fan, wall fan).\r\n\r\n3. **Facade**\r\n   - A facade is an object that serves as a front-facing interface masking more complex underlying or structural code\r\n   - Provide a unified interface to a set of interfaces in a subsystem.\r\n   - Facade deals with interfaces, not implementation. Its purpose is to hide internal complexity behind a single interface that appears simple on the outside.\r\n  \r\n4. **Adaptor**\r\n   \r\n    - The Adapter pattern allows otherwise incompatible classes to work together by converting the interface of one class into an interface expected by the clients\r\n    - It allows two or more previously incompatible objects to interact.\r\n    - It allows reusability of existing functionality.\r\n    - For example, sharing post in diferent social medias like fb,tweet,linkedin can be done using one interface implements the common methods in different classes of social media to share the data. \r\n\r\n5. **Observable**\r\n     - An Observer Pattern says that \"just define a one-to-one dependency so that when one object changes state, all its dependents are notified and updated automatically\".\r\n     - It describes the coupling between the objects and the observer.\r\n     - It provides the support for broadcast-type communication.\r\n     - When the change of a state in one object must be reflected in another object without keeping the objects tight coupled.\r\n\r\n\r\n6. **Proxy**\r\n     - Simply, proxy means an object representing another object\r\n     - It provides the protection to the original object from the outside world.\r\n     - So, we can perform many operations like hiding the information of original object, on demand loading etc.\r\n     - A proxy, in its most general form, is a class functioning as an interface to something else.\r\n     - In proxy pattern, we create object having original object to interface its functionality to outer world.\r\n",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 05:46 PM",
+		"slug": "design-patterns",
+		"categoryslug": "design-patterns",
+		"status": "publised",
+		"summary": "\n<p>In software engineering, a design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.<\/p>\n<p><strong>Some Of Design Patterns:<\/strong><\/p>\n<ol><li>\n<p><strong>Singleton<\/strong><\/p>\n<ul><li>Whenever only dingle instance of a object ...<\/li><\/ul><\/li><\/ol>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Optimising PHP Scripts",
+		"tags": [
+			"common"
+		],
+		"category": "PHP",
+		"body": "*Maily to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.*\r\n\r\n1. Take advantage of native php function\r\n2. Cut out unnecessary classes\r\n3. Turn off debugging notification\r\n4. close file and databse connections\r\n5. unnessary loop needs to breaked. unsetting memories after usages of variable and object.\r\n6. Use single quote rather double quote\r\n7. use identify operator ===\r\n8. use proper string function\r\n9. calculate only once\r\n10. Pass reference to the function to use the veriable outside the function\r\n11. Reduce number of hits to the database\r\n12. Use intermidate caching technology rather processing same thing again\r\n13. Use derived methods instead of base methods in class\r\n14. use json rather XML for data interchange\r\n15.  use isset() always rather using variables directly\r\n\r\n",
+		"addpost": "addpost",
+		"dated": "April 14, 2020 02:50 PM",
+		"slug": "optimising-php-scripts",
+		"categoryslug": "php",
+		"status": "publised",
+		"summary": "\n<p><em>Maily to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.<\/em><\/p>\n<ol><li>Take advantage of native php function<\/li>\n<li>Cut out unnecessary classes<\/li>\n<li>Turn off debugging notification<\/li>\n<li>close file and data...<\/li><\/ol>\n",
+		"prevStatus": "publised"
+	}
+]
