@@ -1,6 +1,75 @@
 [
 	{
 		"author": "Sraban Pahadasingh",
+		"title": "Interview Questions PHP",
+		"tags": [
+			"MySQL",
+			"PHP"
+		],
+		"category": "PHP",
+		"body": "**List some of the features of PHP7.**\r\n\r\n - Scalar type declarations\r\n - Return type declarations\r\n - Null coalescing operator (??)\r\n - Spaceship operator\r\n - Constant arrays using define()\r\n - Anonymous classes\r\n - Closure::call method\r\n - Group use declaration\r\n - Generator return expressions\r\n - Generator delegation\r\n - Space ship operator\r\n\r\n**PHP constants and magic constants**\r\n\r\n- define() \/ const()\r\n- magic constants are __LINE__,  __DIR__\r\n\r\n",
+		"savedraft": "savedraft",
+		"dated": "April 26, 2020 07:50 AM",
+		"slug": "interview-questions-php",
+		"categoryslug": "php",
+		"status": "draft",
+		"summary": "\n<p><strong>List some of the features of PHP7.<\/strong><\/p>\n<ul><li>Scalar type declarations<\/li>\n<li>Return type declarations<\/li>\n<li>Null coalescing operator (??)<\/li>\n<li>Spaceship operator<\/li>\n<li>Constant arrays using define()<\/li>\n<li>Anonymous classes<\/li>\n<li>Closure::call method<\/li>\n<li>...<\/li><\/ul>\n",
+		"addpost": "addpost",
+		"prevStatus": "draft"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Uses of Http Guzzle PHP",
+		"tags": [
+			"common"
+		],
+		"category": "PHP",
+		"body": "#### About PHP Guzzle for API\r\n\r\n\r\n1. `Initialize th instance`\r\n   <pre>$this->client = new \\GuzzleHttp\\Client();<\/pre>\r\n\r\n\r\n2. `Get Method`\r\n     <pre>\r\n\t$params = Array(\r\n\t\t    'key1' => $id, \r\n\t\t    'key2' => $value,\r\n\t\t   );\r\n\t$promise = $this->client->request('GET',  route('statement'), [\r\n\t\t'query' => $params,\r\n\t\t'debug' => false\r\n\t]);\r\n\r\n\t$promise->getBody()->rewind();\r\n\t$output = $promise->getBody()->getContents();\r\n\t$httpStatusCode = $promise->getStatusCode();\r\n<\/pre>\r\n\r\n3. `Post Method: Raw data posting like posting json in payload`\r\n    <pre>\r\n    $rawInput = json_encode($array); \/\/ string\r\n\r\n    -OR-\r\n\r\n    $rawInput = <<<EOF\r\n            SET empdata 2 \u2018Jack Petter\u2019 \u2018192.168.11.11\u2019\r\n            GET empdata \u2018192.168.11.11\u2019\r\n            SET empwebhistory 192.168.11.11 \u2018http:\/\/google.com\u2019\r\n            SET empwebhistory 192.168.11.11 \u2018http:\/\/facebook.com\u2019\r\n            GET empwebhistory  192.168.11.11\r\n            UNSET empwebhistory  192.168.11.11\r\n            GET empwebhistory 192.168.11.11\r\n            END\r\n\t\tEOF;\r\n\r\n    $promise = $this->client->request('POST',  route('statement'), [\r\n\t    'body' => $rawInput,\r\n\t    'debug' => false\r\n\t]);\r\n\r\n\t$promise->getBody()->rewind();\r\n\t$output = $promise->getBody()->getContents();\r\n\t$httpStatusCode = $promise->getStatusCode();\r\n<\/pre>\r\n\r\n4. `Post using Form Fields`\r\n   <pre>\r\n    $filedInputs = Array(\r\n    \t'email' => 'test@gmail.com',\r\n        'name' => 'Test user',\r\n        'password' => 'testpassword',\r\n    );\r\n\r\n    $promise = $this->client->request('POST',  route('statement'), [\r\n\t    'form_params' => $rawInput,\r\n\t    'debug' => false\r\n\t]);\r\n\r\n\t$promise->getBody()->rewind();\r\n\t$output = $promise->getBody()->getContents();\r\n\t$httpStatusCode = $promise->getStatusCode();\r\n<\/pre>\r\n\r\n5. `POST File Upload from Directory`\r\n    <pre>\r\n\t$promise = $this->client->request('POST', 'http:\/\/www.example.com\/files\/post', [\r\n\t    'multipart' => [\r\n\t        [\r\n\t            'name'     => 'file_name',\r\n\t            'contents' => fopen('\/path\/to\/file', 'r')\r\n\t        ],\r\n\t        [\r\n\t            'name'     => 'csv_header',\r\n\t            'contents' => 'First Name, Last Name, Username',\r\n\t            'filename' => 'csv_header.csv'\r\n\t        ]\r\n\t    ]\r\n\t]);\r\n\r\n\t$promise->getBody()->rewind();\r\n\t$output = $promise->getBody()->getContents();\r\n\t$httpStatusCode = $promise->getStatusCode();\r\n<\/pre>\r\n",
+		"addpost": "addpost",
+		"dated": "April 24, 2020 02:42 PM",
+		"slug": "uses-of-http-guzzle-php",
+		"categoryslug": "php",
+		"status": "publised",
+		"summary": "\n<h4>About PHP Guzzle for API<\/h4>\n<ol><li>\n<p><code>Initialize th instance<\/code><\/p>\n<pre>$this-&gt;client = new \\GuzzleHttp\\Client();<\/pre>\n<\/li>\n<li>\n<p><code>Get Method<\/code><\/p>\n<pre>\n$params = Array(\n        'key1' =&gt; $id, \n        'key2' =&gt; $value,\n       );\n$promise = $this-&gt;client-&gt;request('...<\/pre><\/li><\/ol>\n",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Watch - Production Errors & Issues,  Important Transactions from a system MQ",
+		"tags": [
+			"common"
+		],
+		"category": "PHP",
+		"body": "Why need to watch the live system since resposibility is over.\r\n\r\nAns:- Before **time** should rectify the mistakes\/errors to save from a **huge loss**.\r\n\r\nSo to track your live system in a given period of time, get the group messages about trackable events in a MQ. \r\n\r\nEx. \r\nSome time code migrates from one server to another server, time zone changes, watch orders, verify user activity with same time, watch cron jobs are working with required time. \r\n\r\n- Patch MQ to the logger to track each event\r\n- Event can be a server error, language\/framewortk error, output of the given input\r\n\r\n",
+		"savedraft": "savedraft",
+		"dated": "April 22, 2020 07:33 PM",
+		"slug": "watch-production-errors-issues-important-transactions-from-a-system-mq",
+		"categoryslug": "php",
+		"status": "draft",
+		"summary": "\n<p>Why need to watch the live system since resposibility is over.<\/p>\n<p>Ans:- Before <strong>time<\/strong> should rectify the mistakes\/errors to save from a <strong>huge loss<\/strong>.<\/p>\n<p>So to track your live system in a given period of time, get the group messages about trackable events in a ...<\/p>\n",
+		"addpost": "addpost",
+		"prevStatus": "draft"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Steps for a laravel project using TDD",
+		"tags": [
+			"MySQL",
+			"PHP"
+		],
+		"category": "PHP",
+		"body": " 1. Minimum Set up for Project Development\r\n \r\n    - a\r\n    - b\r\n    - c\r\n    - d\r\n    - e\r\n\r\n\r\n 2. Minimum Set up for a Package Developement\r\n\r\n    - a\r\n    - b\r\n    - c\r\n    - d\r\n    - e",
+		"savedraft": "savedraft",
+		"dated": "April 20, 2020 11:31 AM",
+		"slug": "steps-for-a-laravel-project-using-tdd",
+		"categoryslug": "php",
+		"status": "draft",
+		"summary": "\n<ol><li>\n<p>Minimum Set up for Project Development<\/p>\n<ul><li>a<\/li>\n<li>b<\/li>\n<li>c<\/li>\n<li>d<\/li>\n<li>e<\/li>\n<\/ul><\/li>\n<li>\n<p>Minimum Set up for a Package Developement<\/p>\n<ul><li>a<\/li>\n<li>b<\/li>\n<li>c<\/li>\n<li>d<\/li>\n<li>e<\/li>\n<\/ul><\/li>\n<\/ol>...\n",
+		"addpost": "addpost",
+		"prevStatus": "draft"
+	},
+	{
+		"author": "Sraban Pahadasingh",
 		"title": "API Rate-Limiting",
 		"tags": [
 			"PHP",
@@ -128,5 +197,20 @@
 		"status": "publised",
 		"summary": "\n<p><em>Maily to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.<\/em><\/p>\n<ol><li>Take advantage of native php function<\/li>\n<li>Cut out unnecessary classes<\/li>\n<li>Turn off debugging notification<\/li>\n<li>close file and data...<\/li><\/ol>\n",
 		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Interview Questions Javascript & Angular",
+		"tags": [
+			"Javascript"
+		],
+		"category": "Javascript",
+		"body": "...",
+		"savedraft": "savedraft",
+		"dated": "April 28, 2020 03:41 PM",
+		"slug": "interview-questions-javascript-angular",
+		"categoryslug": "javascript",
+		"status": "draft",
+		"summary": "\n<p>...<\/p>...\n"
 	}
 ]
