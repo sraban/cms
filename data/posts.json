@@ -1,6 +1,39 @@
 [
 	{
 		"author": "Sraban Pahadasingh",
+		"title": "Steps for a laravel project using TDD",
+		"tags": [
+			"MySQL",
+			"PHP"
+		],
+		"category": "PHP",
+		"body": " 1. Minimum Set up for Project Development\r\n \r\n    - a\r\n    - b\r\n    - c\r\n    - d\r\n    - e\r\n\r\n\r\n 2. Minimum Set up for a Package Developement\r\n\r\n    - a\r\n    - b\r\n    - c\r\n    - d\r\n    - e",
+		"savedraft": "savedraft",
+		"dated": "May 09, 2020 11:05 PM",
+		"slug": "steps-for-a-laravel-project-using-tdd",
+		"categoryslug": "php",
+		"status": "draft",
+		"summary": "\n<ol><li>\n<p>Minimum Set up for Project Development<\/p>\n<ul><li>a<\/li>\n<li>b<\/li>\n<li>c<\/li>\n<li>d<\/li>\n<li>e<\/li>\n<\/ul><\/li>\n<li>\n<p>Minimum Set up for a Package Developement<\/p>\n<ul><li>a<\/li>\n<li>b<\/li>\n<li>c<\/li>\n<li>d<\/li>\n<li>e<\/li>\n<\/ul><\/li>\n<\/ol>...\n",
+		"addpost": "addpost",
+		"prevStatus": "publised"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Interview Questions Javascript & Angular",
+		"tags": [
+			"Javascript"
+		],
+		"category": "Javascript",
+		"body": "...",
+		"savedraft": "savedraft",
+		"dated": "April 28, 2020 03:41 PM",
+		"slug": "interview-questions-javascript-angular",
+		"categoryslug": "javascript",
+		"status": "draft",
+		"summary": "\n<p>...<\/p>...\n"
+	},
+	{
+		"author": "Sraban Pahadasingh",
 		"title": "Interview Questions PHP",
 		"tags": [
 			"MySQL",
@@ -47,24 +80,6 @@
 		"categoryslug": "php",
 		"status": "draft",
 		"summary": "\n<p>Why need to watch the live system since resposibility is over.<\/p>\n<p>Ans:- Before <strong>time<\/strong> should rectify the mistakes\/errors to save from a <strong>huge loss<\/strong>.<\/p>\n<p>So to track your live system in a given period of time, get the group messages about trackable events in a ...<\/p>\n",
-		"addpost": "addpost",
-		"prevStatus": "draft"
-	},
-	{
-		"author": "Sraban Pahadasingh",
-		"title": "Steps for a laravel project using TDD",
-		"tags": [
-			"MySQL",
-			"PHP"
-		],
-		"category": "PHP",
-		"body": " 1. Minimum Set up for Project Development\r\n \r\n    - a\r\n    - b\r\n    - c\r\n    - d\r\n    - e\r\n\r\n\r\n 2. Minimum Set up for a Package Developement\r\n\r\n    - a\r\n    - b\r\n    - c\r\n    - d\r\n    - e",
-		"savedraft": "savedraft",
-		"dated": "April 20, 2020 11:31 AM",
-		"slug": "steps-for-a-laravel-project-using-tdd",
-		"categoryslug": "php",
-		"status": "draft",
-		"summary": "\n<ol><li>\n<p>Minimum Set up for Project Development<\/p>\n<ul><li>a<\/li>\n<li>b<\/li>\n<li>c<\/li>\n<li>d<\/li>\n<li>e<\/li>\n<\/ul><\/li>\n<li>\n<p>Minimum Set up for a Package Developement<\/p>\n<ul><li>a<\/li>\n<li>b<\/li>\n<li>c<\/li>\n<li>d<\/li>\n<li>e<\/li>\n<\/ul><\/li>\n<\/ol>...\n",
 		"addpost": "addpost",
 		"prevStatus": "draft"
 	},
@@ -173,13 +188,13 @@
 			"common"
 		],
 		"category": "Design Patterns",
-		"body": "In software engineering, a design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.\r\n\r\n**Some Of Design Patterns:**\r\n\r\n1. **Singleton**\r\n   - Whenever only dingle instance of a object is required through out the system\r\n   - Example  DB connection & Logger writing Object.\r\n\r\n2. **Factory**\r\n    - Factory pattern helps in instantiation and creation of Objects\r\n    - According to definition from wikipedia, Factory Pattern is \"A factory is an object for creating other objects\"\r\n    - In simple factory pattern, we have a factory class which has a method that returns different types of object based on given input\r\n    - For an example a Factory produces different type of fans, and all type of fan are kept for Testing, instead of swtiching on \/ off each fan, a factory function should be generated which will test the fan by passing the type of fan, no need to go detail to check how fans are switched off and switched on. It is kind of abstracting the deail functionality of various fans(table fan, ceiling fan, powered fan, wall fan).\r\n\r\n3. **Facade**\r\n   - A facade is an object that serves as a front-facing interface masking more complex underlying or structural code\r\n   - Provide a unified interface to a set of interfaces in a subsystem.\r\n   - Facade deals with interfaces, not implementation. Its purpose is to hide internal complexity behind a single interface that appears simple on the outside.\r\n  \r\n4. **Adaptor**\r\n   \r\n    - The Adapter pattern allows otherwise incompatible classes to work together by converting the interface of one class into an interface expected by the clients\r\n    - It allows two or more previously incompatible objects to interact.\r\n    - It allows reusability of existing functionality.\r\n    - For example, sharing post in diferent social medias like fb,tweet,linkedin can be done using one interface implements the common methods in different classes of social media to share the data. \r\n\r\n5. **Observable**\r\n     - An Observer Pattern says that \"just define a one-to-one dependency so that when one object changes state, all its dependents are notified and updated automatically\".\r\n     - It describes the coupling between the objects and the observer.\r\n     - It provides the support for broadcast-type communication.\r\n     - When the change of a state in one object must be reflected in another object without keeping the objects tight coupled.\r\n\r\n\r\n6. **Proxy**\r\n     - Simply, proxy means an object representing another object\r\n     - It provides the protection to the original object from the outside world.\r\n     - So, we can perform many operations like hiding the information of original object, on demand loading etc.\r\n     - A proxy, in its most general form, is a class functioning as an interface to something else.\r\n     - In proxy pattern, we create object having original object to interface its functionality to outer world.\r\n",
+		"body": "In software engineering, a design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.\r\n\r\n**Some Of Design Patterns:**\r\n\r\n **Singleton**\r\n\r\n   - Whenever only dingle instance of a object is required through out the system\r\n   - Example  DB connection & Logger writing Object.\r\n   - In Angular, any services with @injectable() are singleton always. \r\n\r\n**Facade**\r\n\r\n - A facade is an object that serves as a front-facing interface masking more complex underlying or structural code\r\n - Provide a unified interface to a set of interfaces in a subsystem.\r\n - Facade deals with interfaces, not implementation. Its purpose is to hide internal complexity behind a single interface that appears simple on the outside.\r\n\r\n**Adaptor**\r\n\r\n  - The Adapter pattern allows otherwise incompatible classes to work together by converting the interface of one class into an interface expected by the clients\r\n  - It allows two or more previously incompatible objects to interact.\r\n  - It allows reusability of existing functionality.\r\n  - For example, sharing post in diferent social medias like fb,tweet,linkedin can be done using one interface implements the common methods in different classes of social media to share the data. \r\n\r\n**Observable**\r\n\r\n  - An Observer Pattern says that \"just define a one-to-one dependency so that when one object changes state, all its dependents are notified and updated automatically\".\r\n  - It describes the coupling between the objects and the observer.\r\n  - It provides the support for broadcast-type communication.\r\n  - When the change of a state in one object must be reflected in another object without keeping the objects tight coupled.\r\n\r\n**Proxy**\r\n\r\n  - Simply, proxy means an object representing another object\r\n  - It provides the protection to the original object from the outside world.\r\n  - So, we can perform many operations like hiding the information of original object, on demand loading etc.\r\n  - A proxy, in its most general form, is a class functioning as an interface to something else.\r\n  - In proxy pattern, we create object having original object to interface its functionality to outer world.\r\n\r\n**Front Controller**\r\n\r\n  - Where single entry point like index.php, index.html inframeworks\r\n\r\n**Factory**\r\n\r\n  - Factory pattern helps in instantiation and creation of Objects\r\n  - According to definition from wikipedia, Factory Pattern is \"A factory is an object for creating other objects\"\r\n  - In simple factory pattern, we have a factory class which has a method that returns different types of object based on given input\r\n  - For an example a Factory produces different type of fans, and all type of fan are kept for Testing, instead of swtiching on \/ off each fan, a factory function should be generated which will test the fan by passing the type of fan, no need to go detail to check how fans are switched off and switched on. It is kind of abstracting the deail functionality of various fans(table fan, ceiling fan, powered fan, wall fan).\r\n  - In this pattern, a class simply creates the object you want to use. Consider the following example of the factory pattern:\r\n\r\n<pre>\r\n<code>\r\nclass Automobile\r\n{\r\n    private $vehicleMake;\r\n    private $vehicleModel;\r\n\r\n    public function __construct($make, $model)\r\n    {\r\n        $this->vehicleMake = $make;\r\n        $this->vehicleModel = $model;\r\n    }\r\n\r\n    public function getMakeAndModel()\r\n    {\r\n        return $this->vehicleMake . ' ' . $this->vehicleModel;\r\n    }\r\n}\r\n\r\nclass AutomobileFactory\r\n{\r\n    public static function create($make, $model)\r\n    {\r\n        return new Automobile($make, $model);\r\n    }\r\n}\r\n\r\n\/\/ have the factory create the Automobile object\r\n$veyron = AutomobileFactory::create('Bugatti', 'Veyron');\r\n\r\nprint_r($veyron->getMakeAndModel()); \/\/ outputs \"Bugatti Veyron\"\r\n\r\n<\/code>\r\n<\/pre>\r\n\r\n**Strategy Pattern**\r\n\r\n  - With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for instantiating a particular algorithm to have no knowledge of the actual implementation. This first code snippet outlines a family of algorithms; you may want a serialized array, some JSON or maybe just an array of data\r\n\r\n<pre>\r\n<code>\r\ninterface OutputInterface\r\n{\r\n    public function load();\r\n}\r\n\r\nclass SerializedArrayOutput implements OutputInterface\r\n{\r\n    public function load()\r\n    {\r\n        return serialize($arrayOfData);\r\n    }\r\n}\r\n\r\nclass JsonStringOutput implements OutputInterface\r\n{\r\n    public function load()\r\n    {\r\n        return json_encode($arrayOfData);\r\n    }\r\n}\r\n\r\nclass ArrayOutput implements OutputInterface\r\n{\r\n    public function load()\r\n    {\r\n        return $arrayOfData;\r\n    }\r\n}\r\n\r\nclass SomeClient\r\n{\r\n    private $output;\r\n\r\n    public function setOutput(OutputInterface $outputType)\r\n    {\r\n        $this->output = $outputType;\r\n    }\r\n\r\n    public function loadOutput()\r\n    {\r\n        return $this->output->load();\r\n    }\r\n}\r\n\r\n\/\/ Want some JSON?\r\n$client->setOutput(new JsonStringOutput());\r\n$data = $client->loadOutput();\r\n<\/code>\r\n<\/pre>\r\n\r\n\r\n",
 		"addpost": "addpost",
 		"dated": "April 14, 2020 05:46 PM",
 		"slug": "design-patterns",
 		"categoryslug": "design-patterns",
 		"status": "publised",
-		"summary": "\n<p>In software engineering, a design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.<\/p>\n<p><strong>Some Of Design Patterns:<\/strong><\/p>\n<ol><li>\n<p><strong>Singleton<\/strong><\/p>\n<ul><li>Whenever only dingle instance of a object ...<\/li><\/ul><\/li><\/ol>\n",
+		"summary": "\n<p>In software engineering, a design pattern is a general, reusable solution to a commonly occurring problem within a given context in software design.<\/p>\n<p><strong>Some Of Design Patterns:<\/strong><\/p>\n<p><strong>Singleton<\/strong><\/p>\n<ul><li>Whenever only dingle instance of a object is require...<\/li><\/ul>\n",
 		"prevStatus": "publised"
 	},
 	{
@@ -189,28 +204,28 @@
 			"common"
 		],
 		"category": "PHP",
-		"body": "*Maily to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.*\r\n\r\n1. Take advantage of native php function\r\n2. Cut out unnecessary classes\r\n3. Turn off debugging notification\r\n4. close file and databse connections\r\n5. unnessary loop needs to breaked. unsetting memories after usages of variable and object.\r\n6. Use single quote rather double quote\r\n7. use identify operator ===\r\n8. use proper string function\r\n9. calculate only once\r\n10. Pass reference to the function to use the veriable outside the function\r\n11. Reduce number of hits to the database\r\n12. Use intermidate caching technology rather processing same thing again\r\n13. Use derived methods instead of base methods in class\r\n14. use json rather XML for data interchange\r\n15.  use isset() always rather using variables directly\r\n\r\n",
+		"body": "*Mainly to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.*\r\n\r\n1. Take advantage of native php function\r\n2. Cut out unnecessary classes\r\n3. Turn off debugging notification\r\n4. close file and databse connections\r\n5. unnessary loop needs to breaked. unsetting memories after usages of variable and object.\r\n6. Use single quote rather double quote\r\n7. use identify operator ===\r\n8. use proper string function\r\n9. calculate only once\r\n10. Pass reference to the function to use the veriable outside the function\r\n11. Reduce number of hits to the database\r\n12. Use intermidate caching technology rather processing same thing again\r\n13. Use derived methods instead of base methods in class\r\n14. use json rather XML for data interchange\r\n15.  use isset() always rather using variables directly\r\n\r\n",
 		"addpost": "addpost",
 		"dated": "April 14, 2020 02:50 PM",
 		"slug": "optimising-php-scripts",
 		"categoryslug": "php",
 		"status": "publised",
-		"summary": "\n<p><em>Maily to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.<\/em><\/p>\n<ol><li>Take advantage of native php function<\/li>\n<li>Cut out unnecessary classes<\/li>\n<li>Turn off debugging notification<\/li>\n<li>close file and data...<\/li><\/ol>\n",
+		"summary": "\n<p><em>Mainly to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.<\/em><\/p>\n<ol><li>Take advantage of native php function<\/li>\n<li>Cut out unnecessary classes<\/li>\n<li>Turn off debugging notification<\/li>\n<li>close file and dat...<\/li><\/ol>\n",
 		"prevStatus": "publised"
 	},
 	{
 		"author": "Sraban Pahadasingh",
-		"title": "Interview Questions Javascript & Angular",
+		"title": "Code Deployment To Server",
 		"tags": [
-			"Javascript"
+			"common"
 		],
-		"category": "Javascript",
-		"body": "...",
+		"category": "Linux",
+		"body": "**Way of Deploying Code**\r\n\r\nQ. Multiple HTTP Server + One Code + Multiple Developer\r\n\r\nAns: Repository Management : One  git tool like github, bitbucket, gitlab  & git branches make common for every server.<br>\r\n        Difficulty is with merging the code when conflit arrises while deploying to production server\r\n\r\nQ. How to work in Bitbucket\r\n\r\n\r\n-- -- -- -- --  \r\n**Docker Container for muliptle project**\r\n\r\nQ. ",
 		"savedraft": "savedraft",
-		"dated": "April 28, 2020 03:41 PM",
-		"slug": "interview-questions-javascript-angular",
-		"categoryslug": "javascript",
+		"dated": "May 22, 2020 09:01 AM",
+		"slug": "code-deployment-to-server",
+		"categoryslug": "linux",
 		"status": "draft",
-		"summary": "\n<p>...<\/p>...\n"
+		"summary": "\n<p><strong>Way of Deploying Code<\/strong><\/p>\n<p>Q. Multiple HTTP Server + One Code + Multiple Developer<\/p>\n<p>Ans: Repository Management : One  git tool like github, bitbucket, gitlab  &amp; git branches make common for every server.<br>\nDifficulty is with merging the code when conflit arrises whi...<\/p>\n"
 	}
 ]
