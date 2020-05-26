@@ -1,6 +1,72 @@
 [
 	{
 		"author": "Sraban Pahadasingh",
+		"title": "What is Call Stack, Call Back, Event Loop",
+		"tags": [
+			"Javascript"
+		],
+		"category": "Javascript",
+		"body": "Javascript codes are single threaded means in one row mulitple coding statement can not be executed. But javascript follows some priority based approach to executing the statements - so synchronous code and asynchronous codes are written in one after other but there is execution is different. synhorous codes are  direcly added to the Heap area in stack, while ayschronous statements are added to the **Callable Queue** which is executed once the main stack is finished it synchnous execution, one after another shifted from callable queue to main stack for execution.\r\n\r\nThere is another Queue called **Job Queue** in javascript which comes from thenable then() of promises like callable queue have more priority of execution. \r\n\r\nMain Stack --> Job Queue ---> callable Queue",
+		"savedraft": "savedraft",
+		"dated": "May 26, 2020 12:35 PM",
+		"slug": "what-is-call-stack-call-back-event-loop",
+		"categoryslug": "javascript",
+		"status": "draft",
+		"summary": "\n<p>Javascript codes are single threaded means in one row mulitple coding statement can not be executed. But javascript follows some priority based approach to executing the statements - so synchronous code and asynchronous codes are written in one after other but there is execution is different. syn...<\/p>\n",
+		"addpost": "addpost",
+		"prevStatus": "draft"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "About Coding Standard",
+		"tags": [
+			"common"
+		],
+		"category": "PHP",
+		"body": "**Coding Standards**\r\n\r\n1. Naming conventions  of class name and method names are followed like First letter to be capital.\r\n2. function or method name according to its actions or retunring data\r\n3. function should be very small in the sense it should within 10-20 lines.\r\n4. comments should be added on top of every function or over all class with the author name and time\r\n5. PSR-2 coding standard must be followed Or code linting must be used as for fixing or formatting-alignement the code. vendor\/bin\/php-cs-fixer",
+		"savedraft": "savedraft",
+		"dated": "May 26, 2020 12:28 PM",
+		"slug": "about-coding-standard",
+		"categoryslug": "php",
+		"status": "draft",
+		"summary": "\n<p><strong>Coding Standards<\/strong><\/p>\n<ol><li>Naming conventions  of class name and method names are followed like First letter to be capital.<\/li>\n<li>function or method name according to its actions or retunring data<\/li>\n<li>function should be very small in the sense it should within 10-20 li...<\/li><\/ol>\n",
+		"addpost": "addpost",
+		"prevStatus": "draft"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Today Thought",
+		"tags": [
+			"common"
+		],
+		"category": "Javascript",
+		"body": " 1. **Javascript Advanced**\r\n\r\n\r\n 2. **Angular Structures**\r\n\r\n - monorepo structure\r\n - module based lazy loading\r\n - shared module\r\n - shared pipe, service and directive",
+		"savedraft": "savedraft",
+		"dated": "May 26, 2020 04:35 AM",
+		"slug": "today-thought",
+		"categoryslug": "javascript",
+		"status": "draft",
+		"summary": "\n<ol><li>\n<p><strong>Javascript Advanced<\/strong><\/p>\n<\/li>\n<li>\n<p><strong>Angular Structures<\/strong><\/p>\n<ul><li>monorepo structure<\/li>\n<li>module based lazy loading<\/li>\n<li>shared module<\/li>\n<li>shared pipe, service and directive<\/li>\n<\/ul><\/li>\n<\/ol>...\n"
+	},
+	{
+		"author": "Sraban Pahadasingh",
+		"title": "Code Deployment To Server",
+		"tags": [
+			"common"
+		],
+		"category": "Linux",
+		"body": "**Way of Deploying Code**\r\n\r\nQ. Multiple HTTP Server + One Code + Multiple Developer\r\n\r\nAns: Repository Management : One  git tool like github, bitbucket, gitlab  & git branches make common for every server.<br>\r\n        Difficulty is with merging the code when conflit arrises while deploying to production server\r\n\r\nQ. How to work in Bitbucket\r\n\r\n\r\nQ. How to work in gitLab\r\n\r\n\r\nQ. How to work in Github\r\n\r\n-- -- -- -- --  \r\n\r\n**Docker Container for muliptle project**\r\n\r\nQ. ",
+		"savedraft": "savedraft",
+		"dated": "May 26, 2020 04:26 AM",
+		"slug": "code-deployment-to-server",
+		"categoryslug": "linux",
+		"status": "draft",
+		"summary": "\n<p><strong>Way of Deploying Code<\/strong><\/p>\n<p>Q. Multiple HTTP Server + One Code + Multiple Developer<\/p>\n<p>Ans: Repository Management : One  git tool like github, bitbucket, gitlab  &amp; git branches make common for every server.<br>\nDifficulty is with merging the code when conflit arrises whi...<\/p>\n",
+		"addpost": "addpost",
+		"prevStatus": "draft"
+	},
+	{
+		"author": "Sraban Pahadasingh",
 		"title": "Steps for a laravel project using TDD",
 		"tags": [
 			"MySQL",
@@ -212,20 +278,5 @@
 		"status": "publised",
 		"summary": "\n<p><em>Mainly to avoid generalised coding for better usage of memory and time, use specific and proper logic, statement, inbuilt function.<\/em><\/p>\n<ol><li>Take advantage of native php function<\/li>\n<li>Cut out unnecessary classes<\/li>\n<li>Turn off debugging notification<\/li>\n<li>close file and dat...<\/li><\/ol>\n",
 		"prevStatus": "publised"
-	},
-	{
-		"author": "Sraban Pahadasingh",
-		"title": "Code Deployment To Server",
-		"tags": [
-			"common"
-		],
-		"category": "Linux",
-		"body": "**Way of Deploying Code**\r\n\r\nQ. Multiple HTTP Server + One Code + Multiple Developer\r\n\r\nAns: Repository Management : One  git tool like github, bitbucket, gitlab  & git branches make common for every server.<br>\r\n        Difficulty is with merging the code when conflit arrises while deploying to production server\r\n\r\nQ. How to work in Bitbucket\r\n\r\n\r\n-- -- -- -- --  \r\n**Docker Container for muliptle project**\r\n\r\nQ. ",
-		"savedraft": "savedraft",
-		"dated": "May 22, 2020 09:01 AM",
-		"slug": "code-deployment-to-server",
-		"categoryslug": "linux",
-		"status": "draft",
-		"summary": "\n<p><strong>Way of Deploying Code<\/strong><\/p>\n<p>Q. Multiple HTTP Server + One Code + Multiple Developer<\/p>\n<p>Ans: Repository Management : One  git tool like github, bitbucket, gitlab  &amp; git branches make common for every server.<br>\nDifficulty is with merging the code when conflit arrises whi...<\/p>\n"
 	}
 ]
